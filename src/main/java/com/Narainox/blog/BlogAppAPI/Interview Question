@@ -1,0 +1,2 @@
+How we Autowired the Interface?
+when the Spring Container started at that time all the repository interfaceis scanned and dynamically at run Springs give him a imple class that class is called the proxy class.and when we are wirting this Autowired than that is iject on it and that is craeted dynamically
