@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +23,7 @@ public class Category {
 
     @Column(name ="description")
     private String categoryDescription;
+
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)   //if we are removing the parent than the child ia slo removed by itself
+    private List<Post> posts=new ArrayList<>();
 }
